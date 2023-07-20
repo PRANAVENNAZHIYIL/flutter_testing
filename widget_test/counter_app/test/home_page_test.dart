@@ -1,4 +1,3 @@
-import 'package:counter_app/counter.dart';
 import 'package:counter_app/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -22,6 +21,7 @@ void main() {
       expect(ctr2, findsNothing);
 
       final incrementBtn = find.byKey(const Key('increment_counter'));
+
       await tester.tap(incrementBtn);
 
       await tester.pump();
@@ -33,6 +33,8 @@ void main() {
       expect(ctr4, findsNothing);
 
       expect(find.byType(AppBar), findsOneWidget);
+
+      expect(find.byType(BottomAppBar), findsNothing);
     },
   );
 }

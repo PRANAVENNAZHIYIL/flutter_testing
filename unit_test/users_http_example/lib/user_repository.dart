@@ -1,5 +1,5 @@
-import 'package:users_http_example/user_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:users_http_example/user_model.dart';
 
 class UserRepository {
   final http.Client client;
